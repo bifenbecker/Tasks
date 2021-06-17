@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+</head>
+<body>
+{% if error %}
+<h1>{{ error }}</h1>
+{% else %}
+<h1>{{ user }}</h1>
+<p>{{ total }}</p>
+{% for donation in donations %}
+<ul>
+    <h3>{{ donation.id }}</h3>
+    <li>{{ donation.name }}</li>
+    <li>{{ donation.username }}</li>
+    <li>{{ donation.recipient_name }}</li>
+    <li>{{ donation.message }}</li>
+    <li>{{ donation.currency }}</li>
+    <li>{{ donation.created_at }}</li>
+</ul>
+{% endfor %}
+{% endif %}
+</body>
+</html>
